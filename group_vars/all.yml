@@ -1,0 +1,4 @@
+db_name: db_name
+db_user: user_name
+db_pass: db_pass
+db_port: 3306

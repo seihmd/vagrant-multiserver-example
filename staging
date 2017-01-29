@@ -1,0 +1,16 @@
+[webservers]
+192.168.30.10 ansible_ssh_port=2222 ansible_ssh_private_key_file='/Users/sei/Documents/staging-example/.vagrant/machines/example.com.web/virtualbox/private_key'
+
+[dbservers]
+192.168.30.11 ansible_ssh_port=2200 ansible_ssh_private_key_file='/Users/sei/Documents/staging-example/.vagrant/machines/example.com.db/virtualbox/private_key'
+
+[staging:children]
+webservers
+dbservers
+
+[all:vars]
+ansible_ssh_host=127.0.0.1
+ansible_ssh_user=vagrant
+ansible_ssh_pass=vagrant
+web_ip='192.168.30.10'
+db_ip='192.168.30.11'
